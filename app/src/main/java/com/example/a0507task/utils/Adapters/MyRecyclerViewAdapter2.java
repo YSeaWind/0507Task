@@ -1,4 +1,4 @@
-package com.example.a0507task.utils;
+package com.example.a0507task.utils.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.a0507task.R;
+import com.example.a0507task.utils.childutils.ChildNewsMessage;
 
 import java.util.List;
 

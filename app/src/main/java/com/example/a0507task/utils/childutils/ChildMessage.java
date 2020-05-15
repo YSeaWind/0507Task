@@ -1,4 +1,4 @@
-package com.example.a0507task.utils;
+package com.example.a0507task.utils.childutils;
 
 public class ChildMessage {
     //定义要加载的item控件的属性   数据少的话可以直接使用内部类的形式

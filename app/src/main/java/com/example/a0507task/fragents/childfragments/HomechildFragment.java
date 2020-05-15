@@ -13,8 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.a0507task.R;
-import com.example.a0507task.utils.ChildNewsMessage;
-import com.example.a0507task.utils.MyRecyclerViewAdapter2;
+import com.example.a0507task.utils.childutils.ChildNewsMessage;
+import com.example.a0507task.utils.Adapters.MyRecyclerViewAdapter2;
 
 import java.util.ArrayList;
 import java.util.List;

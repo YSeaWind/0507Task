@@ -7,4 +7,9 @@
     <color name="main0">#5FC897</color>
     <color name="main1">#8A9692</color>
     <color name="line">#e0e0e0</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorHui">#7A7A7A</color>
+
 </resources>

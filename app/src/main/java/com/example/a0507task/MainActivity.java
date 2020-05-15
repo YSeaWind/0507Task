@@ -1,29 +1,24 @@
 package com.example.a0507task;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import com.example.a0507task.fragents.GengduoFragment;
 import com.example.a0507task.fragents.HomeFragment;
 import com.example.a0507task.fragents.MineFragment;
 import com.example.a0507task.fragents.SetFragment;
-import com.example.a0507task.fragents.childfragments.JunshiFragment;
-import com.example.a0507task.fragents.childfragments.LishiFragment;
-import com.example.a0507task.fragents.childfragments.TuijianFragment;
-import com.example.a0507task.fragents.childfragments.YuleFragment;
 import com.example.a0507task.utils.Message;
-import com.example.a0507task.utils.MyRecyclerViewAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,8 +29,12 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     private RadioGroup rgMenu;
     private RadioButton rbHome, rbSet, rbgengduo,rbmine;
 
+
     private FragmentTransaction fragmentTransaction;
 
+
+    private DrawerLayout drawerLayout;
+    private ImageView menuIv;
 //recyclerView的加载
 
     List<Message> messageList;
@@ -63,6 +62,15 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 //显示Fragment
         ShowFragment(firstFragment);
         rgMenu.setOnCheckedChangeListener(this);
+
+        menuIv = findViewById(R.id.main_iv_menu);
+        drawerLayout = findViewById(R.id.drawerLayout);
+        menuIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.openDrawer(Gravity.LEFT);
+            }
+        });
 
     }
     private List<Fragment> fragmentList;// 存储所有的Fragment

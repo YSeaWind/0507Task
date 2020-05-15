@@ -13,7 +13,7 @@
         android:orientation="horizontal">
         <com.example.a0507task.utils.MyImageView
             android:id="@+id/userImg"
-            android:src="@mipmap/p3"
+            android:src="@mipmap/p1"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -11,7 +11,6 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.a0507task.R;
 import com.example.a0507task.fragents.childfragments.HomechildFragment;
@@ -19,9 +18,9 @@ import com.example.a0507task.fragents.childfragments.JunshiFragment;
 import com.example.a0507task.fragents.childfragments.LishiFragment;
 import com.example.a0507task.fragents.childfragments.TuijianFragment;
 import com.example.a0507task.fragents.childfragments.YuleFragment;
+import com.example.a0507task.utils.Adapters.MyFvAdapter;
 import com.example.a0507task.utils.Message;
-import com.example.a0507task.utils.MyRecyclerViewAdapter;
-import com.example.a0507task.utils.MyViewPagerAdapter;
+import com.example.a0507task.utils.Adapters.MyViewPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +38,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
     private FragmentManager manager;
     private RecyclerView recyclerView;
     private List<Message> messageList;
-    MyRecyclerViewAdapter myRecyclerViewAdapter;
+    MyFvAdapter.MyRecyclerViewAdapter myRecyclerViewAdapter;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -77,7 +76,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
 
         //初始化recyclerView
         recyclerView = view.findViewById(R.id.recyclerView);
-        myRecyclerViewAdapter = new MyRecyclerViewAdapter(messageList, getActivity());
+        myRecyclerViewAdapter = new MyFvAdapter.MyRecyclerViewAdapter(messageList, getActivity());
         recyclerView.setAdapter(myRecyclerViewAdapter);
         //使用recyclerview的加载功能
         //线性排列的管理者
@@ -88,7 +87,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.scrollToPosition(messageList.size()-1);//默认滑动样式
 
-        myRecyclerViewAdapter.setOnItemClickListener(new MyRecyclerViewAdapter.OnItemClickListener() {
+        myRecyclerViewAdapter.setOnItemClickListener(new MyFvAdapter.MyRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void OnItemClick(View view) {
                 int position = recyclerView.getChildAdapterPosition(view);

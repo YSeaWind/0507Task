@@ -1,4 +1,4 @@
-package com.example.a0507task.utils;
+package com.example.a0507task.utils.Adapters;
 
 import android.view.ViewGroup;
 

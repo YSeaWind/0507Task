@@ -59,7 +59,7 @@ public class MyImageView extends AppCompatImageView {
         paint.setShader(bitmapShader);
 
 
-        paint.setStyle(Paint.Style.STROKE);//影响圆形显示  表示线条描边或填充的方式
+        paint.setStyle(Paint.Style.FILL_AND_STROKE);//影响圆形显示  表示线条描边或填充的方式
         paint.setStrokeWidth(scale);//外边框的大小
         paint.setColor(mBorderColor);//添加外边框
 
